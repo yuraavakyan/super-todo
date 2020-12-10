@@ -1,17 +1,19 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 100vh;
+  margin-top: 50px;
 }
 
 .container {
-  height: 60vh;
-  width: 100%;
+  height: auto;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .title {
@@ -22,40 +24,30 @@
   gap: 30px;
 }
 
-.divider {
-  height: 100%;
-  width: 5px;
-  background-color: black;
-  opacity: 0.7;
-}
-
-.inputPart,
-.resultPart {
-  width: 45vw;
+.inputPart {
+  height: 40px;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 20px;
-}
-
-.inputPart {
-  height: 80px;
-  max-width: 100%;
 }
 
 .resultPart {
+  padding-top: 70px;
   font-size: 20px;
-  height: 100%;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: auto;
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 200px);
 }
 .inp {
   border: none;
   border-bottom: 3px solid #ffbb33;
   width: 400px;
   height: 100%;
-  font-size: 50px;
+  font-size: 30px;
 }
 
 .inp:focus {
@@ -63,55 +55,21 @@
 }
 
 .inp::placeholder {
-  font-size: 50px;
+  font-size: 40px;
 }
 
-.btn {
+.button {
   border: none;
   background-color: #ffbb33;
-  padding: 10px 80px;
+  padding: 10px 40px;
   height: 100%;
-  font-size: 50px;
+  font-size: 20px;
   border-radius: 15px;
   outline: none;
 }
 
 .btn:active {
   outline: none;
-}
-
-.list-item-container {
-  width: 100%;
-  max-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-.list-item {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 30px;
-  width: 100%;
-}
-
-.list-item input[type="checkbox"] {
-  opacity: 0;
-  position: absolute;
-}
-
-p {
-  margin: 0;
-  width: 500px;
-}
-
-.del {
-  background-color: #ffbb33;
-  padding: 0 30px;
-  border-radius: 15px;
 }
 
 .check {
@@ -126,33 +84,18 @@ p {
   border-radius: 15px;
 }
 
-.text::before {
-  content: "";
-  width: 15px;
-  height: 15px;
-  border: 1px solid black;
-  margin-right: 10px;
-  border-radius: 3px;
-}
-
 .text {
-  display: flex;
-  align-items: center;
+  width: 100px;
+  word-wrap: break-word;
+  height: auto;
 }
 
-.text:hover::before,
-.list-item input[type="checkbox"]:hover + .text::before {
-  background-color: #ffbb33;
+.container {
+  width: 80vw;
 }
 
-.list-item input[type="checkbox"]:checked + .text::before {
-  content: "\002714";
-  background-color: #ecaf34;
+.App {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.text:checked {
-  background-color: blue;
 }
